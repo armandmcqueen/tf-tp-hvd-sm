@@ -25,15 +25,16 @@ def launch_training():
             process = subprocess.Popen([train_script], encoding='utf-8', stdout=subprocess.PIPE)
         
             while True:
-                output = process.stdout.readline()
-                if output == '' and process.poll() is not None:
+                if process.poll() != None:
                     break
+                output = process.stdout.readline()
                 if output:
                     print(output.strip())
 
             exitcode = process.poll()
+            print(f"Training script exit code: {exitcode}")
     except Exception as e:
-        print("launch training exception occured")
+        print("Launch training exception occured")
         exitcode = 1
         print(str(e))
 
