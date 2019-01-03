@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # Customize S3_BUCKET
-S3_BUCKET=aws-ajayvohra-ml-exp
+S3_BUCKET=
 
 # Customize S3_PREFIX
 S3_PREFIX=mask-rcnn/sagemaker/input
 
 # Customize Stage DIR
 # Stage directory must be on EBS volume with 100 GB available space
-STAGE_DIR=/u2/stage2
+STAGE_DIR=$HOME/stage
 
 if [ -e $STAGE_DIR ]
 then
