@@ -3,7 +3,7 @@
 ## Pre-requisites
 1. [Create and activate an AWS Account](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
 
-2. [Manage your service limits](https://aws.amazon.com/premiumsupport/knowledge-center/manage-service-limits/) so your EC2 service limit allows you to launch required number of GPU enabled EC2 instances, such as p3.16xlarge. You would need a minimum limit of 2 GPU enabled instances. For the purpose of this setup, an EC2 service limit of 8 p3.16xlarge instance types is recommended.
+2. [Manage your SageMaker service limits](https://aws.amazon.com/premiumsupport/knowledge-center/manage-service-limits/) so your SageMaker service limit allows you to launch required number of GPU enabled EC2 instances, such as ml.p3.16xlarge. You would need a minimum limit of 2 GPU enabled instances. For the purpose of this setup, a SageMaker service limit of 8 ml.p3.16xlarge instance types is recommended.
 
 3. [Install and configure AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html)
 
