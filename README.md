@@ -3,7 +3,7 @@
 ## Pre-requisites
 1. [Create and activate an AWS Account](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
 
-2. [Manage your service limits](https://aws.amazon.com/premiumsupport/knowledge-center/manage-service-limits/) so your EC2 service limit allows you to launch required number of GPU enabled EC2 instanes, such as p3.16xlarge. You would need a minimum limit of 2 GPU enabled instances. For the prupose of this setup, an EC2 service limit of 8 p3.16xlarge instance types is recommended.
+2. [Manage your service limits](https://aws.amazon.com/premiumsupport/knowledge-center/manage-service-limits/) so your EC2 service limit allows you to launch required number of GPU enabled EC2 instances, such as p3.16xlarge. You would need a minimum limit of 2 GPU enabled instances. For the purpose of this setup, an EC2 service limit of 8 p3.16xlarge instance types is recommended.
 
 3. [Install and configure AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html)
 
@@ -11,7 +11,7 @@
 
 ## Overview
 
-In this project, we are focused on distirbuted training using [TensorFlow](https://github.com/tensorflow/tensorflow), [TensorPack](https://github.com/tensorpack/tensorpack) and [Horovod](https://eng.uber.com/horovod/) on [Amazon SageMaker](https://aws.amazon.com/sagemaker/).
+In this project, we are focused on distributed training using [TensorFlow](https://github.com/tensorflow/tensorflow), [TensorPack](https://github.com/tensorpack/tensorpack) and [Horovod](https://eng.uber.com/horovod/) on [Amazon SageMaker](https://aws.amazon.com/sagemaker/).
 
 While all the concepts described here are quite general and are applicable to running any combination of TensorFlow, TensorPack and Horovod based algorithms in Amazon SageMaker, we will make these concepts concrete by focusing on distributed training for [TensorPack Mask/Faster-RCNN](https://github.com/tensorpack/tensorpack/tree/master/examples/FasterRCNN) example. 
 
@@ -25,7 +25,7 @@ While the idea of using S3 to stage data is quite general, we will make the conc
    
    a) S3_BUCKET variable must point to an existing bucket in the same region in which you are planning to do SageMaker training. 
    
-   b) STAGE_DIR varibale must point to a volume with 50 - 100 GB of available space. 
+   b) STAGE_DIR variable must point to a volume with 50 - 100 GB of available space. 
 
 2. Execute ```./prepare-s3-bucket.sh``` to stage data and code needed for distributed training in an S3 bucket.
 
