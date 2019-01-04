@@ -29,11 +29,11 @@ fullname="${account}.dkr.ecr.${region}.amazonaws.com/${image}:${tag}"
 
 # If the repository doesn't exist in ECR, create it.
 
-aws ecr describe-repositories --repository-names "${image}" > /dev/null 2>&1
+aws ecr describe-repositories --region ${region} --repository-names "${image}" > /dev/null 2>&1
 
 if [ $? -ne 0 ]
 then
-    aws ecr create-repository --repository-name "${image}" > /dev/null
+    aws ecr create-repository --region ${region} --repository-name "${image}" > /dev/null
 fi
 
 # Get the login command from ECR and execute it directly
