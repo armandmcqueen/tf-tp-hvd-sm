@@ -27,7 +27,7 @@ While the idea of using S3 to stage data is quite general, we will make the conc
    
    b) STAGE_DIR variable must point to a volume with 50 - 100 GB of available space. 
 
-2. Execute ```./prepare-s3-bucket.sh``` to stage data and code needed for distributed training in an S3 bucket.
+2. Execute ```nohup ./prepare-s3-bucket.sh &``` to stage data and code needed for distributed training in an S3 bucket.    **You can use the [screen](https://linuxize.com/post/how-to-use-linux-screen/) command as an alternative to using ```nohup``` and ```screen``` appears to work more reliably than ```nohup``` command.**
 
 ## Build and Upload Docker Image to ECR
 
