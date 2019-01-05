@@ -239,7 +239,7 @@ MODE_MASK={mode_mask} \
 BACKBONE.WEIGHTS={train_data_dir}/pretrained-models/COCO-R50FPN-MaskRCNN-Standard.npz \
 BACKBONE.NORM={batch_norm} \
 DATA.TRAIN='["train2017"]' \
-DATA.VAL='val2017' \
+DATA.VAL='("val2017")' \
 TRAIN.STEPS_PER_EPOCH={steps_per_epoch} \
 TRAIN.EVAL_PERIOD={eval_period} \
 TRAIN.LR_SCHEDULE='{lr_schedule}' \
@@ -260,6 +260,7 @@ TRAINER=horovod"""
                     print(output.strip())
                     
             exitcode = process.poll()
+            print(f"Training script exit code:{exitcode}")
         except Exception as e:
             print("train exception occured")
             exitcode = 1
