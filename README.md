@@ -19,7 +19,7 @@ While all the concepts described here are quite general and are applicable to ru
 
 Next we will stage the data and code in an S3 bucket that will be later used for distributed training in Amazon SageMaker. 
 
-While the idea of using S3 to stage data is quite general, we will make the concept concrete by staging [Coco 2017](http://cocodataset.org/#download) dataset and [COCO-R50FPN-MaskRCNN-Standard](http://models.tensorpack.com/FasterRCNN/COCO-R50FPN-MaskRCNN-Standard.npz) pre-trained model, so we can do distributed training for [TensorPack Mask/Faster-RCNN](https://github.com/tensorpack/tensorpack/tree/master/examples/FasterRCNN) example 
+While the idea of using S3 to stage data is quite general, we will make the concept concrete by staging [Coco 2017](http://cocodataset.org/#download) dataset and [ImageNet-R50-AlignPadding](http://models.tensorpack.com/FasterRCNN/ImageNet-R50-AlignPadding.npz) pre-trained model, so we can do distributed training for [TensorPack Mask/Faster-RCNN](https://github.com/tensorpack/tensorpack/tree/master/examples/FasterRCNN) example 
 
 1. Customize variables in ```prepare-s3-bucket.sh```
    

@@ -236,7 +236,7 @@ mpirun -np {numprocesses} \\
 --config DATA.BASEDIR={train_data_dir} \
 MODE_FPN={mode_fpn} \
 MODE_MASK={mode_mask} \
-BACKBONE.WEIGHTS={train_data_dir}/pretrained-models/COCO-R50FPN-MaskRCNN-Standard.npz \
+BACKBONE.WEIGHTS={train_data_dir}/pretrained-models/ImageNet-R50-AlignPadding.npz \
 BACKBONE.NORM={batch_norm} \
 DATA.TRAIN='["train2017"]' \
 DATA.VAL=val2017 \

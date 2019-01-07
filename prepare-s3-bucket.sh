@@ -31,7 +31,7 @@ unzip $STAGE_DIR/train/annotations_trainval2017.zip -d $STAGE_DIR/train
 rm $STAGE_DIR/train/annotations_trainval2017.zip
 
 mkdir $STAGE_DIR/train/pretrained-models
-wget -O $STAGE_DIR/train/pretrained-models/COCO-R50FPN-MaskRCNN-Standard.npz http://models.tensorpack.com/FasterRCNN/COCO-R50FPN-MaskRCNN-Standard.npz
+wget -O $STAGE_DIR/train/pretrained-models/ImageNet-R50-AlignPadding.npz http://models.tensorpack.com/FasterRCNN/ImageNet-R50-AlignPadding.npz
 
 aws s3 cp --recursive $STAGE_DIR/train s3://$S3_BUCKET/$S3_PREFIX/train
 aws s3 cp --recursive code s3://$S3_BUCKET/$S3_PREFIX/code
